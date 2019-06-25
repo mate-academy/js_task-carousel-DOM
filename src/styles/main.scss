@@ -1,7 +1,16 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "twitter-card";
+@import "carousel";
 
 body {
-  background: $c-gray;
+  font-family: Lato, sans-serif;
+}
+
+.page {
+  &__container {
+    max-width: 468px;
+    margin: auto;
+  }
 }
