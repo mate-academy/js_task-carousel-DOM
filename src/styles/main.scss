@@ -6,4 +6,68 @@
 
 body {
   font-family: Lato, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .carousel__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel {
+    list-style: none;
+    display: flex;
+    width: 310px;
+    padding-left: 0;
+
+    &__item:first-child {
+      display: inline-block;
+    }
+
+    &__item:nth-child(2),
+    &__item:nth-child(3),
+    &__item:nth-child(4) {
+      display: inline-block;
+    }
+
+    &__btn {
+      margin: 0 15px;
+    }
+
+    .dot {
+      visibility: hidden;
+      display: inline;
+      opacity: 0;
+    }
+
+    .dot_active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.carousel__dots-wrap {
+  display: flex;
+
+  & > div {
+    width: 10px;
+    height: 10px;
+    background: #d0d0d0;
+    border-radius: 50%;
+    margin: 0 7px;
+    transition: all 0.3s;
+  }
+
+  .carousel__dots_active {
+    background: #767476;
+  }
 }
