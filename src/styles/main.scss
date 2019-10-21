@@ -17,6 +17,11 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  position: relative;
   overflow: hidden;
   margin: 0 15px;
 }
@@ -24,37 +29,36 @@ body {
 .carousel {
   width: 310px;
   display: flex;
-  position: relative;
   transition: 1s;
-}
 
-.carousel__item {
-  margin-right: 50px;
-
-  &:last-child {
-    margin-right: 0;
+  &__item {
+    margin-right: 50px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__dot {
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+  
+    &:last-child {
+      margin: 0;
+    }
+  
+    &_active {
+      background-color: darken($color: gray, $amount: 25%);
+    }
   }
 }
 
 .carousel__dots-wrap {
   position: absolute;
-  top: 380px;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-}
-
-.carousel__dot {
-  margin-right: 5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: grey;
-
-  &:last-child {
-    margin: 0;
-  }
-
-  &_active {
-    background-color: darken($color: gray, $amount: 25%);
-  }
 }
