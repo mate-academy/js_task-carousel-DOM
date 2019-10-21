@@ -10,7 +10,7 @@ let position = 0;
 const list = carousel.querySelector('ul');
 const listElements = carousel.querySelectorAll('li');
 
-next.onclick = () => {
+next.addEventListener('click', () => {
   position -= width;
   position = Math.max(position, -width * (listElements.length - 1));
   list.style.marginLeft = position + 'px';
@@ -22,9 +22,9 @@ next.onclick = () => {
     currentDot = currentDot.nextElementSibling;
   }
   currentDot.classList.add('carousel__dot_active');
-};
+});
 
-prev.onclick = () => {
+prev.addEventListener('click', () => {
   position += width;
   position = Math.min(position, 0);
   list.style.marginLeft = position + 'px';
@@ -35,4 +35,4 @@ prev.onclick = () => {
     currentDot = currentDot.previousElementSibling;
   }
   currentDot.classList.add('carousel__dot_active');
-};
+});
