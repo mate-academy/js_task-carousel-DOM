@@ -1,5 +1,9 @@
 'use strict';
 
+// import { eventNames } from "cluster";
+
+// import { deepStrictEqual } from "assert";
+
 const carousel = document.querySelector('.carousel');
 const leftButton = document.querySelector('.carousel__btn_prev');
 const rightButton = document.querySelector('.carousel__btn_next');
@@ -19,6 +23,9 @@ let slidePosition = 0; // it left position current card
 let i = 0; // count of active dot
 
 rightButton.addEventListener('click', () => {
+  const oldActiveDot = dotsArr.findIndex((dot) =>
+    dot.classList.contains('carousel__dot_active'));
+  dots[oldActiveDot].classList.remove('carousel__dot_active');
   if (slidePosition === -(slideDistance * (carouselItem.length - 1))) { /* count
     quantity of cards */
     slidePosition = 0;
@@ -39,7 +46,11 @@ rightButton.addEventListener('click', () => {
     dots[++i].classList.add('carousel__dot_active');
   }
 });
+
 leftButton.addEventListener('click', () => {
+  const oldActiveDot = dotsArr.findIndex((dot) =>
+    dot.classList.contains('carousel__dot_active'));
+  dots[oldActiveDot].classList.remove('carousel__dot_active');
   if (slidePosition === 0) {
     slidePosition = -(slideDistance * (carouselItem.length - 1));
   } else {
@@ -54,4 +65,22 @@ leftButton.addEventListener('click', () => {
     dots[i].classList.remove('carousel__dot_active');
     dots[--i].classList.add('carousel__dot_active');
   }
+});
+
+const dotsArr = [...dots];
+
+dots[0].parentNode.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('carousel__dot')) {
+    return;
+  }
+
+  const oldActiveDot = dotsArr.findIndex((dot) =>
+    dot.classList.contains('carousel__dot_active'));
+  dots[oldActiveDot].classList.remove('carousel__dot_active');
+  event.target.classList.add('carousel__dot_active');
+
+  i = dotsArr.findIndex((dot) =>
+    dot.classList.contains('carousel__dot_active'));
+  slidePosition = 0 + (-slideDistance * i);
+  carousel.style.left = `${slidePosition}px`;
 });

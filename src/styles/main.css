@@ -55,6 +55,10 @@ h1 {
   height: 47px;
 }
 
+.carousel__btn:hover {
+  cursor: pointer;
+}
+
 .carousel__btn_next {
   background: url(../images/slider-btn/next-btn.png);
 }
@@ -115,6 +119,10 @@ li {
   border-radius: 50px;
   background-color: #aaa8aa;
   margin: 0 3px;
+}
+
+.carousel__dot:hover {
+  cursor: pointer;
 }
 
 .carousel__dot_active {
