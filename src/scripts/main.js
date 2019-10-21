@@ -4,10 +4,11 @@ const next = document.querySelector('.carousel__btn_next');
 const prev = document.querySelector('.carousel__btn_prev');
 const dots = document.querySelectorAll('.carousel__dot');
 let index = 0;
-let end = false;
+let end;
 
 next.addEventListener('click', () => {
   index += 1;
+  end = false;
   if (index > 3) {
     index = 3;
     end = true;
@@ -17,6 +18,7 @@ next.addEventListener('click', () => {
 
 prev.addEventListener('click', () => {
   index -= 1;
+  end = false;
   if (index < 0) {
     index = 0;
     end = true;
