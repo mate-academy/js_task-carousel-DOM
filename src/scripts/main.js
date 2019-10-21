@@ -8,7 +8,6 @@ let end = false;
 
 next.addEventListener('click', () => {
   index += 1;
-  end = false;
   if (index > 3) {
     index = 3;
     end = true;
@@ -18,7 +17,6 @@ next.addEventListener('click', () => {
 
 prev.addEventListener('click', () => {
   index -= 1;
-  end = false;
   if (index < 0) {
     index = 0;
     end = true;
