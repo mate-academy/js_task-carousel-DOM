@@ -1,9 +1,5 @@
 'use strict';
 
-// import { eventNames } from "cluster";
-
-// import { deepStrictEqual } from "assert";
-
 const carousel = document.querySelector('.carousel');
 const leftButton = document.querySelector('.carousel__btn_prev');
 const rightButton = document.querySelector('.carousel__btn_next');
@@ -20,7 +16,7 @@ visible cards block. If someone change width of card,
 this block will change too */
 
 let slidePosition = 0; // it left position current card
-let i = 0; // count of active dot
+let activeDot = 0; // count of active dot
 
 rightButton.addEventListener('click', () => {
   const oldActiveDot = dotsArr.findIndex((dot) =>
@@ -36,14 +32,14 @@ rightButton.addEventListener('click', () => {
     carousel.style.left = `${slidePosition}px`; /* else we change
     carousel pos to next card */
   };
-  if (i === dots.length - 1) { /* we control quantity and
+  if (activeDot === dots.length - 1) { /* we control quantity and
     active style  of dotes */
-    dots[i].classList.remove('carousel__dot_active');
-    i = 0;
-    dots[i].classList.add('carousel__dot_active');
+    dots[activeDot].classList.remove('carousel__dot_active');
+    activeDot = 0;
+    dots[activeDot].classList.add('carousel__dot_active');
   } else {
-    dots[i].classList.remove('carousel__dot_active');
-    dots[++i].classList.add('carousel__dot_active');
+    dots[activeDot].classList.remove('carousel__dot_active');
+    dots[++activeDot].classList.add('carousel__dot_active');
   }
 });
 
@@ -57,13 +53,13 @@ leftButton.addEventListener('click', () => {
     slidePosition += slideDistance;
   }
   carousel.style.left = `${slidePosition}px`;
-  if (i === 0) { // we control quantity and active style  of dotes.
-    dots[i].classList.remove('carousel__dot_active');
-    i = dots.length - 1;
-    dots[i].classList.add('carousel__dot_active');
+  if (activeDot === 0) { // we control quantity and active style  of dotes.
+    dots[activeDot].classList.remove('carousel__dot_active');
+    activeDot = dots.length - 1;
+    dots[activeDot].classList.add('carousel__dot_active');
   } else {
-    dots[i].classList.remove('carousel__dot_active');
-    dots[--i].classList.add('carousel__dot_active');
+    dots[activeDot].classList.remove('carousel__dot_active');
+    dots[--activeDot].classList.add('carousel__dot_active');
   }
 });
 
@@ -79,8 +75,8 @@ dots[0].parentNode.addEventListener('click', (e) => {
   dots[oldActiveDot].classList.remove('carousel__dot_active');
   event.target.classList.add('carousel__dot_active');
 
-  i = dotsArr.findIndex((dot) =>
+  activeDot = dotsArr.findIndex((dot) =>
     dot.classList.contains('carousel__dot_active'));
-  slidePosition = 0 + (-slideDistance * i);
+  slidePosition = 0 + (-slideDistance * activeDot);
   carousel.style.left = `${slidePosition}px`;
 });
