@@ -7,3 +7,47 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.carousel {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 330px;
+  overflow: hidden;
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 10px;
+    position: relative;
+    right: 0;
+    transition: right 0.5s;
+    animation: scroll-left 0.5s both;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #c2c0bf;
+    margin: 0 5px;
+
+    &_active {
+      background-color: #696765;
+    }
+  }
+}
