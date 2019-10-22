@@ -3,53 +3,50 @@ const items = document.querySelectorAll('.carousel__item');
 const next = document.querySelector('.carousel__btn_next');
 const prev = document.querySelector('.carousel__btn_prev');
 const dots = document.querySelectorAll('.carousel__dot');
-let index = 0;
+let myIndex = 0;
 let end;
 
 next.addEventListener('click', () => {
-  index += 1;
+  myIndex += 1;
   end = false;
-  if (index > 3) {
-    index = 3;
+  if (myIndex > 3) {
+    myIndex = 3;
     end = true;
   }
-  setVisibility(index, true, end);
+  setVisibility(myIndex, true);
 });
 
 prev.addEventListener('click', () => {
-  index -= 1;
+  myIndex -= 1;
   end = false;
-  if (index < 0) {
-    index = 0;
+  if (myIndex < 0) {
+    myIndex = 0;
     end = true;
   }
-  setVisibility(index, false, end);
+  setVisibility(myIndex, false);
 });
 
-function setVisibility(ind, option) {
+function setVisibility(index, option) {
   if (option) {
     items[index - 1].classList.remove('displayed');
     dots[index - 1].classList.remove('carousel__dot_active');
     if (!end) {
-      setAnimation(ind);
-      setTimeout(() => removeAnim(index), 500);
+      setAnimation(index);
+      setTimeout(() => setAnimation(index), 500);
     }
   } else {
     items[index + 1].classList.remove('displayed');
     dots[index + 1].classList.remove('carousel__dot_active');
     if (!end) {
-      setAnimation(ind);
-      setTimeout(() => removeAnim(index), 500);
+      setAnimation(index);
+      setTimeout(() => setAnimation(index), 500);
     }
   }
   items[index].classList.add('displayed');
   dots[index].classList.add('carousel__dot_active');
 }
 
-function setAnimation(ind) {
-  items[ind].classList.add('animated', 'bounceIn');
-}
-
-function removeAnim(ind) {
-  items[ind].classList.remove('animated', 'bounceIn');
+function setAnimation(index) {
+  items[index].classList.toggle('animated');
+  items[index].classList.toggle('bounceIn');
 }
