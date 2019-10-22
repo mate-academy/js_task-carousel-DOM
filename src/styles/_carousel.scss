@@ -1,0 +1,55 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  margin: auto;
+
+  &__btn {
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+  }
+
+  &__list {
+    width: 316px;
+    overflow: hidden;
+  }
+
+  &__container {
+    position: relative;
+    left: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    transition: margin-left 1s ease;
+  }
+
+  &__item {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin: auto;
+  }
+
+  &__dot {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid #2284a1;
+    margin: 0 5px;
+    background-color: rgb(245, 242, 242);
+    transition: background-color 1s ease;
+
+    &_active {
+      background-color: rgb(128, 122, 122);
+    }
+  }
+}
