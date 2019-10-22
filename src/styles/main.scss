@@ -3,7 +3,74 @@
 @import "typography";
 @import "twitter-card";
 @import "carousel-button";
+$card-width: 310px;
+$card-height: 160px;
+$dot-size: 13px;
 
 body {
+
   font-family: Lato, sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+
+  position: relative;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.bound {
+
+  position: relative;
+  width: calc(#{$card-width} + 40px);
+  max-height: calc(#{$card-height} + 40px);
+  margin: auto;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.carousel {
+
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  //right: 0;
+  transition: right 1s;
+
+  &__item {
+
+    list-style: none;
+    display: inline;
+  }
+
+  &__btn {
+
+    margin: auto 0;
+  }
+
+  &__dots-wrap {
+
+    display: flex;
+    margin: auto;
+    width: 70px;
+    justify-content: space-between;
+  }
+
+  &__dot {
+
+    height: $dot-size;
+    width: $dot-size;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+
+    &_active {
+
+      background-color: #636363;
+    }
+  }
 }
