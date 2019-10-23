@@ -7,3 +7,65 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel {
+  width: 350px;
+  height: 160px;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    transition: 0.5s transform ease-in-out;
+  }
+
+  &__item {
+    margin: 0 20px;
+  }
+
+  &__dots-wrap {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__btn {
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background-color: lightgray;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darkgray;
+    }
+  }
+
+  &__dot_active {
+    background-color: grey;
+  }
+}
