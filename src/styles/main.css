@@ -1,0 +1,107 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.twitter-card {
+  background: #fff;
+  height: 160px;
+  width: 310px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #828282;
+  padding: 20px 15px 10px 25px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.twitter-card__message {
+  height: 80px;
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.twitter-card__name {
+  margin-left: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.twitter-card__avatar {
+  width: 30px;
+  height: 30px;
+}
+.twitter-card__ico {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  width: 15px;
+  height: 12px;
+  background: url("../images/twitter.png");
+}
+
+.carousel__btn {
+  width: 47px;
+  height: 47px;
+}
+.carousel__btn_next {
+  background: url(../images/slider-btn/next-btn.png);
+}
+.carousel__btn_prev {
+  background: url(../images/slider-btn/prev-btn.png);
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+.container {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  width: 350px;
+  overflow: hidden;
+}
+
+.carousel {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0;
+  display: flex;
+}
+.carousel__item {
+  list-style-type: none;
+  margin: 0 20px;
+}
+
+.carousel__btn {
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.carousel__dots-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+.carousel__dots-wrap > .carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #aaa8aa;
+  margin-right: 1%;
+}
+.carousel__dots-wrap > .carousel__dot_active {
+  background-color: #767476;
+}
+
+/*# sourceMappingURL=main.css.map */
