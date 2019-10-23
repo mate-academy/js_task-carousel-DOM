@@ -6,9 +6,10 @@
   border-radius: 4px;
   border: 1px solid #828282;
   padding: 20px 15px 10px 25px;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
+  top: 0;
 
   &__message {
     height: 80px;

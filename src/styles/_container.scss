@@ -1,0 +1,45 @@
+.wrapper {
+  width: 470px;
+  max-height: 160px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: calc(50vh - 80px);
+}
+
+.carousel {
+  width: 310px;
+  height: 160px;
+  list-style: none;
+  top: calc(50vh - 80px);
+  padding-left: 0;
+  overflow: hidden;
+
+  &__item {
+    position: relative;
+    width: inherit;
+  }
+
+  &__dots-wrap {
+    width: 50px;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 25px);
+  }
+
+  &__dot {
+    width: 10px;
+    height: inherit;
+    background: #CBCBCB;
+    border-radius: 50%;
+  }
+
+  &__dot_active {
+    background: #767476;
+  }
+}
