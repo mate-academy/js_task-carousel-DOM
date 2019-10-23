@@ -1,36 +1,45 @@
 'use strict';
 
-const buttonLeft = document.querySelector('.carousel__btn_prev');
-let left = 0;
-let circle = 1;
+const leftBtn = document.querySelector('.carousel__btn_next');
+const rightBtn = document.querySelector('.carousel__btn_prev');
 const carousel = document.querySelector('.carousel');
-buttonLeft.addEventListener('click', () => {
-  circle++;
-  let dot = document.getElementById('' + circle);
-  const dotBefor = document.getElementById('' + (circle - 1));
-  left -= 400;
-  if (left < -1200) {
-    left = 0;
-    circle = 1;
-    dot = document.getElementById('' + 1);
-  }
-  carousel.style.left = left + 'px';
-  dotBefor.style.backgroundColor = 'silver';
-  dot.style.backgroundColor = 'black';
-});
+const cards = document.querySelectorAll('.carousel__item');
+let dot = document.querySelector(' .carousel__dot');
+let position = 0;
 
-const buttonRight = document.querySelector('.carousel__btn_next');
-buttonRight.addEventListener('click', () => {
-  circle--;
-  let dot = document.getElementById('' + circle);
-  const dotAfter = document.getElementById('' + (circle + 1));
-  left += 400;
-  if (left > 1) {
-    left = -1200;
-    circle = 4;
-    dot = document.getElementById('' + 4);
+rightBtn.addEventListener('click', rightSlide);
+leftBtn.addEventListener('click', leftSlide);
+
+function leftSlide() {
+  if (position <= -((cards.length - 1) * 400)) {
+    return;
   }
-  carousel.style.left = left + 'px';
-  dotAfter.style.backgroundColor = 'silver';
-  dot.style.backgroundColor = 'black';
-});
+
+  position -= 400;
+  carousel.style.transform = `translateX(${position}px)`;
+
+  if (!dot.nextElementSibling) {
+    return;
+  }
+
+  dot.className = 'carousel__dot';
+  dot = dot.nextElementSibling;
+  dot.classList.add('carousel__dot_active');
+}
+
+function rightSlide() {
+  if (position >= 0) {
+    return;
+  }
+
+  position += 400;
+  carousel.style.transform = `translateX(${position}px)`;
+
+  if (!dot.previousElementSibling) {
+    dot = document.querySelector('.carousel__dot');
+  }
+
+  dot.className = 'carousel__dot';
+  dot = dot.previousElementSibling;
+  dot.classList.add('carousel__dot_active');
+}
