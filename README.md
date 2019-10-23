@@ -19,4 +19,4 @@ Create a “carousel” – a ribbon of twitter cards that can be scrolled by cl
 
 **Result**
 
-- [DEMO LINK](https://jhunt05.github.io/js_task-carousel-DOM/)
+- [LINK](https://jhunt05.github.io/js_task-carousel-DOM/)
