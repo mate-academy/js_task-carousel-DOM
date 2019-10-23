@@ -16,7 +16,7 @@ cards.forEach(function(item, i) {
   i > 0 ? item.style.display = 'none' : item.style.display = 'flex'; //Добавляем им стили
 });
 
-buttonRight.addEventListener('click', function(event) { //Говнокод 1
+buttonRight.addEventListener('click', function() { //Говнокод 1
   if (eventIsRunning) {
     return;
   }
@@ -69,7 +69,7 @@ buttonRight.addEventListener('click', function(event) { //Говнокод 1
   }
 });
 
-buttonLeft.addEventListener('click', function(event) { //Говнокод 2
+buttonLeft.addEventListener('click', function() { //Говнокод 2
   if (eventIsRunning) {
     return;
   }
