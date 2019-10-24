@@ -7,3 +7,44 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.carousel {
+  width: 350px;
+  display: flex;
+  overflow: hidden;
+  list-style: none;
+  margin: auto 20px;
+  padding: 0;
+
+  &__item {
+    margin: 0 20px;
+    width: 350px;
+    transition: margin-left 0.5s;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 3px;
+
+    &_active {
+      background-color: gray;
+      transition: 0.5s;
+    }
+  }
+}
