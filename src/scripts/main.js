@@ -7,7 +7,6 @@ const dots = document.querySelectorAll('.carousel__dot');
 let position = -20;
 const width = 350;
 let counter = 0;
-const itemsLength = 5;
 
 prevButton.addEventListener('click', () => {
   if (counter < 1) {
@@ -20,7 +19,7 @@ prevButton.addEventListener('click', () => {
 });
 
 nextButton.addEventListener('click', () => {
-  if (counter > itemsLength - 2) {
+  if (counter > dots.length - 2) {
     return;
   }
   position += width;
