@@ -36,9 +36,9 @@ buttonRight.addEventListener('click', function() { //Говнокод 1
   targetCardNext.style.display = 'flex';
   targetCardNext.style.left = `320px`;
 
-  const set1 = setInterval(function() {
+  const animation1 = setInterval(() => {
     if (positionPrev === -40) {
-      clearInterval(set1);
+      clearInterval(animation1);
       eventIsRunning = false;
     } else {
       positionPrev--;
@@ -46,9 +46,9 @@ buttonRight.addEventListener('click', function() { //Говнокод 1
     targetCardPrev.style.left = `${positionPrev * 8}px`;
   }, 8);
 
-  const set2 = setInterval(function() {
+  const animation2 = setInterval(() => {
     if (positionNext === 0) {
-      clearInterval(set2);
+      clearInterval(animation2);
       eventIsRunning = false;
     } else {
       positionNext--;
@@ -89,9 +89,9 @@ buttonLeft.addEventListener('click', function() { //Говнокод 2
   targetCardNext.style.display = 'flex';
   targetCardNext.style.left = `-320px`;
 
-  const set1 = setInterval(function() {
+  const animation1 = setInterval(() => {
     if (positionPrev === 40) {
-      clearInterval(set1);
+      clearInterval(animation1);
       eventIsRunning = false;
     } else {
       positionPrev++;
@@ -99,9 +99,9 @@ buttonLeft.addEventListener('click', function() { //Говнокод 2
     targetCardPrev.style.left = `${positionPrev * 8}px`;
   }, 8);
 
-  const set2 = setInterval(function() {
+  const animation2 = setInterval(() => {
     if (positionNext === 0) {
-      clearInterval(set2);
+      clearInterval(animation2);
       eventIsRunning = false;
     } else {
       positionNext++;
