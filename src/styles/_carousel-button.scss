@@ -1,12 +1,20 @@
 .carousel__btn {
   width: 47px;
   height: 47px;
+  cursor: pointer;
+  transition: 0.5s;
 
   &_next {
+    position: absolute;
+    left: 62vw;
+    top: 70px;
     background: url(../images/slider-btn/next-btn.png);
   }
 
   &_prev {
+    position: absolute;
+    left: 36vw;
+    top: 70px;
     background: url(../images/slider-btn/prev-btn.png);
   }
 }
