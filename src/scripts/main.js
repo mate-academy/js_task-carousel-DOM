@@ -36,6 +36,7 @@ buttonRight.addEventListener('click', function() { //Говнокод 1
   targetCardNext.style.display = 'flex';
   targetCardNext.style.left = `320px`;
 
+
   const animation1 = setInterval(() => {
     if (positionPrev === -40) {
       clearInterval(animation1);
