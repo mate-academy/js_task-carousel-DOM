@@ -11,11 +11,11 @@ rightBtn.addEventListener('click', rightSlide);
 leftBtn.addEventListener('click', leftSlide);
 
 function leftSlide() {
-  if (position <= -((cards.length - 1) * 400)) {
+  if (position <= -((cards.length - 1) * 800)) {
     return;
   }
 
-  position -= 400;
+  position -= 800;
   carousel.style.transform = `translateX(${position}px)`;
 
   if (!dot.nextElementSibling) {
@@ -32,7 +32,7 @@ function rightSlide() {
     return;
   }
 
-  position += 400;
+  position += 800;
   carousel.style.transform = `translateX(${position}px)`;
 
   if (!dot.previousElementSibling) {
