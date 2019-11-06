@@ -46,20 +46,31 @@ h1 {
 }
 
 .carousel__btn {
-  width: 47px;
-  height: 47px;
+  width: 67px;
+  height: 67px;
+  background-image: norepid;
 }
 .carousel__btn_next {
-  background: url(../images/slider-btn/next-btn.png);
+  background: url(../images/slider-btn/next-btn.png) center no-repeat;
 }
 .carousel__btn_prev {
-  background: url(../images/slider-btn/prev-btn.png);
+  background: url(../images/slider-btn/prev-btn.png) center no-repeat;
 }
 
 body {
   font-family: Lato, sans-serif;
   display: flex;
   margin: 0;
+  justify-content: center;
+}
+
+.card {
+  width: 700px;
+  height: 600px;
+}
+.card > img {
+  display: block;
+  margin: 0 auto;
 }
 
 .slider {
@@ -69,8 +80,8 @@ body {
 .carousel {
   margin: 0;
   padding: 0;
-  width: 400px;
-  height: 200px;
+  width: 800px;
+  height: 700px;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -83,14 +94,14 @@ body {
   list-style-type: none;
 }
 .carousel__btn {
-  margin-top: 70px;
+  margin-top: 300px;
   cursor: pointer;
   visibility: visible;
 }
 
 .carousel__dots-wrap {
-  left: 210px;
-  top: 200px;
+  left: calc(50% - 30px);
+  top: 700px;
   position: absolute;
   display: flex;
   justify-content: space-between;
