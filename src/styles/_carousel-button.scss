@@ -1,12 +1,13 @@
 .carousel__btn {
-  width: 47px;
-  height: 47px;
+  width: 67px;
+  height: 67px;
+  background-image: norepid;
 
   &_next {
-    background: url(../images/slider-btn/next-btn.png);
+    background: url(../images/slider-btn/next-btn.png) center no-repeat;
   }
 
   &_prev {
-    background: url(../images/slider-btn/prev-btn.png);
+    background: url(../images/slider-btn/prev-btn.png) center no-repeat;
   }
 }
