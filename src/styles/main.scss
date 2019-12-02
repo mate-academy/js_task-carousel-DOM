@@ -1,9 +1,57 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "reset";
 @import "twitter-card";
 @import "carousel-button";
 
 body {
   font-family: Lato, sans-serif;
+}
+
+.carousel {
+  display: flex;
+  width: 310px;
+  position: absolute;
+  right: 0;
+  transition: right 2s ease;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn {
+    margin: 0 10px;
+  }
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-left: 5px;
+    &_active {
+      background-color: #3d4e61;
+    }
+  }
+  &__dots-wrap {
+    margin-top: 20px;
+    display: flex;
+  }
+}
+
+.slider {
+  width: 310px;
+  height: 160px;
+  position: relative;
+  overflow: hidden;
 }
