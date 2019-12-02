@@ -7,3 +7,51 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  overflow: hidden;
+}
+
+.carousel {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 9999px;
+  height: 160px;
+  display: flex;
+
+  &__item {
+    margin: 0 20px;
+  }
+
+  &__btn {
+    margin-top: 50px;
+  }
+
+  &__dots-wrap {
+    margin-top: 16px;
+    margin-left: 125px;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+  }
+
+  &__dot {
+    height: 16px;
+    width: 16px;
+    background-color: #aaa;
+    border-radius: 50%;
+
+    &_active {
+      background-color: #666;
+    }
+  }
+}
