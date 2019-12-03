@@ -34,6 +34,11 @@ body {
 
   &__btn {
     margin-top: 50px;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid gold;
+    }
   }
 
   &__dots-wrap {

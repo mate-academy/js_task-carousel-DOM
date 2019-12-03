@@ -1,6 +1,8 @@
 .carousel__btn {
   width: 47px;
   height: 47px;
+  border: 1px solid aqua;
+  border-radius: 50%;
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
