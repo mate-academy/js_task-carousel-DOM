@@ -6,4 +6,44 @@
 
 body {
   font-family: Lato, sans-serif;
+  display: flex;
+  width: 500px;
+  margin: auto;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  width: 320px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.carousel {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  margin: auto;
+  padding: 0;
+  transition-duration: 0.5s;
+}
+
+.carousel__dots-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #aaa8aa;
+  border-radius: 50px;
+}
+
+.carousel__dot_active {
+  background-color: #767476;
 }
