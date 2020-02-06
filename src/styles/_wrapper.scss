@@ -1,0 +1,15 @@
+.wrapper {
+  &-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  &-card {
+    width: $card-width + 20px;
+    overflow: hidden;
+    margin: 20px 30px;
+  }
+}
