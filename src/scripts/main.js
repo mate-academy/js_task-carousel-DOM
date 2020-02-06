@@ -15,10 +15,6 @@ allSlides.forEach((slide) => {
   slide.style.marginRight = `${slideGap}px`;
 });
 
-dots.forEach((dot, index) => {
-  dot.setAttribute('data-num', `${index}`);
-});
-
 const handleNextButtonClick = () => {
   if (position <= (-(numberOfSlides - 1) * slideWidth)) {
     position = slideWidth + slideGap;
