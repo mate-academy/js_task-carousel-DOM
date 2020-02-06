@@ -9,9 +9,7 @@ const slideWidth = carousel.offsetWidth;
 const slideGap = 30;
 let position = 0;
 const dots = document.querySelectorAll('.carousel__dot');
-const dotsWrapper = document.querySelector('.carousel__dots-wrap');
 let counter = 0;
-let selectedDot = null;
 
 allSlides.forEach((slide) => {
   slide.style.marginRight = `${slideGap}px`;
@@ -39,7 +37,6 @@ const handleNextButtonClick = () => {
   } else {
     dots[dots.length - 1].classList.remove('carousel__dot_active');
   }
-
   position -= (slideWidth + slideGap);
   carousel.style.marginLeft = `${position}px`;
   carousel.style.transition = 'margin 0.3s ease-in-out';
@@ -68,23 +65,5 @@ const handlePrevButtonClick = () => {
   carousel.style.transition = 'margin 0.3s ease-in-out';
 };
 
-const handleDotClick = ({ target }) => {
-  const index = target.getAttribute('data-num');
-
-  for (let i = 0; i < dots.length; i += 1) {
-    dots[i].classList.remove('carousel__dot_active');
-  }
-
-  if (selectedDot) {
-    selectedDot.classList.remove('carousel__dot_active');
-  }
-  target.classList.add('carousel__dot_active');
-  selectedDot = target;
-  position = -(slideWidth + slideGap) * index;
-  carousel.style.marginLeft = `${position}px`;
-  carousel.style.transition = 'margin 0.3s ease-in-out';
-};
-
 nextButton.addEventListener('click', handleNextButtonClick);
 prevButton.addEventListener('click', handlePrevButtonClick);
-dotsWrapper.addEventListener('click', handleDotClick);
