@@ -7,3 +7,71 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.carousel {
+  position: relative;
+  margin: auto;
+  width: 450px;
+  height: 160px;
+
+  &__container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 310px;
+    margin: 30px auto;
+  }
+
+  &__list {
+    position: relative;
+    list-style: none;
+    width: 310px;
+    padding: 0;
+    margin: 0;
+    transition: transform 500ms ease-in-out;
+
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+
+    &_prev {
+      left: 0;
+    }
+
+    &_next {
+      right: 0;
+    }
+  }
+
+  &__dots-wrap {
+    margin: 30px auto;
+    width: 100px;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+  }
+
+  &__dot_active {
+    background-color: lightslategray;
+  }
+}
