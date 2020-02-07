@@ -1,6 +1,8 @@
 .carousel__btn {
   width: 47px;
   height: 47px;
+  transform: translateY(56.5px);
+  cursor: pointer;
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
