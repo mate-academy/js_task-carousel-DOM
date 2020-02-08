@@ -1,9 +1,11 @@
 .carousel__btn {
   width: 47px;
   height: 47px;
+  cursor: pointer;
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
+    margin-left: 10px;
   }
 
   &_prev {
