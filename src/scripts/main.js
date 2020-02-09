@@ -38,11 +38,15 @@ carousel.addEventListener('transitionend', () => {
     carousel.style.transition = 'none';
     counter = carouselItem.length - 2;
     carousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    dots[dots.length - 1].classList.add('carousel__dot_active');
+    dotsCounter = dots.length - 1;
   }
 
   if (carouselItem[counter].id === 'firstClone') {
     carousel.style.transition = 'none';
     counter = carouselItem.length - counter;
     carousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    dots[0].classList.add('carousel__dot_active');
+    dotsCounter = 0;
   }
 });
