@@ -2,7 +2,6 @@
 
 const carousel = document.querySelector('.carousel');
 const carouselItem = document.querySelectorAll('.carousel__item');
-// const dotActive = document.querySelectorAll('.carousel__dot');
 //  buttons
 const prevBtn = document.querySelector('.carousel__btn_prev');
 const nextBtn = document.querySelector('.carousel__btn_next');
