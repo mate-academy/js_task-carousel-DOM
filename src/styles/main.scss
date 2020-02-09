@@ -41,6 +41,7 @@ body {
     position: absolute;
     border-radius: 50%;
     transition: box-shadow ease 0.3s;
+    cursor: pointer;
     &:hover {
       box-shadow: 2px 1px 15px 2px rgba(113,228,255,0.74);
     }
