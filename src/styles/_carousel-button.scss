@@ -2,6 +2,10 @@
   width: 47px;
   height: 47px;
 
+  &:active {
+    opacity: 0.65;
+  }
+
   &_next {
     background: url(../images/slider-btn/next-btn.png);
   }
