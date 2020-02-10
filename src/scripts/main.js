@@ -35,18 +35,6 @@ function carousel(root) {
   let currentSlide = carouselList[currentIdx];
   const width = 330;
 
-  // function slidesLoopNext() {
-  //   const firstSlidHtml = carouselList[0];
-  //
-  //   carouselWrapper.append(firstSlidHtml);
-  // }
-  //
-  // function slidesLoopPrev() {
-  //   let lastSlidHtml = carouselList[carouselList.length - 1];
-  //
-  //   carouselWrapper.prepend(lastSlidHtml);
-  // }
-
   currentSlide.classList.add('carousel__item--active');
 
   function handlerSliderControl(e) {
