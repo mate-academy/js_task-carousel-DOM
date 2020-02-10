@@ -1,12 +1,18 @@
 .carousel__btn {
   width: 47px;
   height: 47px;
+  position: absolute;
+  z-index: 10;
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
+    top: 8%;
+    left: 62%;
   }
 
   &_prev {
     background: url(../images/slider-btn/prev-btn.png);
+    top: 8%;
+    left: 35%;
   }
 }
