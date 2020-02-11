@@ -8,7 +8,7 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.carousel-constainer {
+.carousel-container {
   position: relative;
   height: 160px;
   width: 30%;
@@ -72,7 +72,7 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  &__dot_active {
+  &__dot--active {
     background-color: rgba(0, 0, 0, 0.75);
   }
 }

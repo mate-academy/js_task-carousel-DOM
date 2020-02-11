@@ -4,12 +4,14 @@ const track = document.querySelector('.carousel');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__btn_next');
 const prevButton = document.querySelector('.carousel__btn_prev');
-const dotsWrap = document.querySelector('.carousel__dots-wrap');
-const dots = Array.from(dotsWrap.children);
+const dotsWrapper = document.querySelector('.carousel__dots-wrap');
+const dots = Array.from(dotsWrapper.children);
 const slideWidth = 310;
 
 const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + 'px';
+  const slideWidthIndex = slideWidth * index;
+
+  slide.style.left = `${slideWidthIndex}px`;
 };
 
 slides.forEach(setSlidePosition);
@@ -21,14 +23,14 @@ const moveToSlide = (currentSlide, targetSlide) => {
 };
 
 const updateDots = (currentDot, targetDot) => {
-  currentDot.classList.remove('carousel__dot_active');
-  targetDot.classList.add('carousel__dot_active');
+  currentDot.classList.remove('carousel__dot--active');
+  targetDot.classList.add('carousel__dot--active');
 };
 
 prevButton.addEventListener('click', e => {
   const currentSlide = track.querySelector('.current-slide');
   const prevSlide = currentSlide.previousElementSibling;
-  const currentDot = dotsWrap.querySelector('.carousel__dot_active');
+  const currentDot = dotsWrapper.querySelector('.carousel__dot--active');
   const prevDot = currentDot.previousElementSibling;
 
   moveToSlide(currentSlide, prevSlide);
@@ -38,17 +40,18 @@ prevButton.addEventListener('click', e => {
 nextButton.addEventListener('click', e => {
   const currentSlide = track.querySelector('.current-slide');
   const nextSlide = currentSlide.nextElementSibling;
-  const currentDot = dotsWrap.querySelector('.carousel__dot_active');
+  const currentDot = dotsWrapper.querySelector('.carousel__dot--active');
   const nextDot = currentDot.nextElementSibling;
 
   moveToSlide(currentSlide, nextSlide);
   updateDots(currentDot, nextDot);
 });
 
-dotsWrap.addEventListener('click', e => {
+dotsWrapper.addEventListener('click', e => {
   const targetDot = e.target.closest('.carousel__dot');
+
   const currentSlide = track.querySelector('.current-slide');
-  const currentDot = dotsWrap.querySelector('.carousel__dot_active');
+  const currentDot = dotsWrapper.querySelector('.carousel__dot--active');
   const targetIndex = dots.findIndex(dot => dot === targetDot);
   const targetSlide = slides[targetIndex];
 
