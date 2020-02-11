@@ -1,12 +1,17 @@
 .carousel__btn {
+  position: absolute;
+  top: calc(50% - 24px);
   width: 47px;
   height: 47px;
+  z-index: 10;
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
+    right: 0;
   }
 
   &_prev {
     background: url(../images/slider-btn/prev-btn.png);
+    left: 0;
   }
 }
