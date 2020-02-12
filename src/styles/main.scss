@@ -2,8 +2,83 @@
 @import "fonts";
 @import "typography";
 @import "twitter-card";
-@import "carousel-button";
 
 body {
   font-family: Lato, sans-serif;
+}
+
+.carousel {
+  position: relative;
+
+  width: 310px;
+  margin: 10% auto;
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 10px 3px rgba(102,148,179,0.66);
+    }
+
+    &:active {
+      background: aquamarine;
+    }
+
+    &_next {
+      right: -60px;
+      background: url(../images/slider-btn/next-btn.svg);
+    }
+
+    &_prev {
+      left: -60px;
+      background: url(../images/slider-btn/prev-btn.svg);
+    }
+  }
+
+  &__body {
+    width: 310px;
+    overflow: hidden;
+
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    transition: margin-left 0.5s;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__dots-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    width: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid green;
+
+    &_active {
+      background: red;
+    }
+  }
 }
