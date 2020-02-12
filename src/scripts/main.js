@@ -11,9 +11,7 @@ const dots = document.querySelectorAll('.carousel__dot');
 
 prev.addEventListener('click', () => {
   if (index > 0 && index <= (dots.length - 1)) {
-    dots[index].className = ('carousel__dot');
-    index--;
-    dots[index].className = ('carousel__dot carousel__dot_active');
+    indexDot(-1);
   }
 
   position += width;
@@ -23,12 +21,15 @@ prev.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
   if (index >= 0 && index < (dots.length - 1)) {
-    dots[index].className = ('carousel__dot');
-    index++;
-    dots[index].className = ('carousel__dot carousel__dot_active');
+    indexDot(1);
   }
-
   position -= width;
   position = Math.max(position, -width * (dots.length - 1));
   list.style.marginLeft = `${position}px`;
 });
+
+function indexDot(x) {
+  dots[index].className = ('carousel__dot');
+  index = index + x;
+  dots[index].className = ('carousel__dot carousel__dot_active');
+}
