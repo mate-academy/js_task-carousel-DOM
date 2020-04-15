@@ -1,10 +1,11 @@
 'use strict';
 
 const wrapper = document.querySelector('.wrapper');
+const itemGallery = document.querySelector('.carousel');
 const allItems = document.querySelectorAll('.carousel__item');
 let counter = 0;
 let counterArray = 1;
-const step = 310;
+const step = 330;
 const dots = document.querySelectorAll('.carousel__dot');
 const activeClass = 'carousel__dot_active';
 
@@ -24,10 +25,7 @@ wrapper.addEventListener('click', e => {
     }
 
     dots[counterArray - 1].classList.add(activeClass);
-
-    for (const item of allItems) {
-      item.style = `transform: translateX(${counter}px);`;
-    }
+    itemGallery.style = `transform: translateX(${counter}px);`;
   } else if (e.target.classList.contains('carousel__btn_next')) {
     counter -= step;
 
@@ -43,9 +41,6 @@ wrapper.addEventListener('click', e => {
     }
 
     dots[counterArray - 1].classList.add(activeClass);
-
-    for (const item of allItems) {
-      item.style = `transform: translateX(${counter}px);`;
-    }
+    itemGallery.style = `transform: translateX(${counter}px);`;
   }
 });
