@@ -16,32 +16,30 @@ btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', prevSlide);
 
 function nextSlide() {
-  const toSlideLeft = carouselPos - itemWidth;
+  let toSlide = carouselPos - itemWidth;
 
-  if (Math.abs(toSlideLeft) >= carouselWidth) {
-    currentSlide = items.length - 1;
-
-    return;
+  if (Math.abs(toSlide) >= carouselWidth) {
+    toSlide = 0;
+    currentSlide = -1;
   }
 
-  carousel.style.transform = `translateX(${toSlideLeft}px)`;
-  carouselPos = toSlideLeft;
+  carousel.style.transform = `translateX(${toSlide}px)`;
+  carouselPos = toSlide;
   currentSlide++;
 
   changeDot();
 }
 
 function prevSlide() {
-  const toSlideRight = carouselPos + itemWidth;
+  let toSlide = carouselPos + itemWidth;
 
-  if (toSlideRight > 0) {
-    currentSlide = 0;
-
-    return;
+  if (toSlide > 0) {
+    currentSlide = dots.length;
+    toSlide = itemWidth - carouselWidth;
   }
 
-  carousel.style.transform = `translateX(${toSlideRight}px)`;
-  carouselPos = toSlideRight;
+  carousel.style.transform = `translateX(${toSlide}px)`;
+  carouselPos = toSlide;
   currentSlide--;
 
   changeDot();
