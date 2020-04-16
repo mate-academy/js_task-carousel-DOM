@@ -14,7 +14,7 @@ function init(carousel) {
 
   prevButton.addEventListener('click', function() {
     if (position === 0) {
-      return;
+      position = list.childElementCount;
     }
     position--;
     list.style.transform = `translate(-${position * step}px)`;
@@ -23,7 +23,7 @@ function init(carousel) {
 
   nextButton.addEventListener('click', function() {
     if (position >= list.childElementCount - 1) {
-      return;
+      position = -1;
     }
     position++;
     list.style.transform = `translate(-${position * step}px)`;
