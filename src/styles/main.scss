@@ -6,4 +6,58 @@
 
 body {
   font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  margin-top: 100px;
+  width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  &__btn {
+    margin-top: 60px;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  &__ul {
+    height: 160px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 0.3s;
+    font-size: 0;
+  }
+  &__item {
+    display: inline-block;
+  }
+
+  &__dots-wrap {
+    position: absolute;
+    top: 180px;
+    display: flex;
+  }
+
+  &__dot {
+    background-color: gray;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+  }
+
+  &__dot_active {
+    background-color: black;
+  }
+  &__galery {
+    width: 310px;
+    overflow: hidden;
+    margin-right: 0;
+  }
 }
