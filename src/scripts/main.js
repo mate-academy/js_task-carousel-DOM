@@ -14,17 +14,27 @@ const dots = document.querySelectorAll('.carousel__dot');
 btnPrev.addEventListener('click', prevAct);
 
 function prevAct() {
-  position += width * count;
-  position = Math.min(position, 0);
-  list.style.marginLeft = position + 'px';
+  if (position === 0) {
+    position = -width * (dots.length - 1);
+    list.style.marginLeft = position + 'px';
+  } else {
+    position += width * count;
+    position = Math.min(position, 0);
+    list.style.marginLeft = position + 'px';
+  }
 }
 
 btnNext.addEventListener('click', nextAct);
 
 function nextAct() {
-  position -= width * count;
-  position = Math.max(position, -width * (listElems.length - count));
-  list.style.marginLeft = position + 'px';
+  if (position === -width * (dots.length - 1)) {
+    position = 0;
+    list.style.marginLeft = position + 'px';
+  } else {
+    position -= width * count;
+    position = Math.max(position, -width * (listElems.length - count));
+    list.style.marginLeft = position + 'px';
+  }
 }
 
 btnNext.addEventListener('click', nextDot);
@@ -33,9 +43,7 @@ function nextDot() {
   dots[active].classList.remove('carousel__dot_active');
 
   if (active + 1 === dots.length) {
-    dots[active].classList.add('carousel__dot_active');
-
-    return;
+    active = 0;
   } else {
     active++;
   }
@@ -48,7 +56,7 @@ function prevDot() {
   dots[active].classList.remove('carousel__dot_active');
 
   if (active === 0) {
-    active = 0;
+    active = dots.length - 1;
   } else {
     active--;
   }
