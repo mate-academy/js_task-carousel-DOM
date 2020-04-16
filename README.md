@@ -1,4 +1,4 @@
-# Carousel
+npm sta# Carousel
 
 ## Task
 
