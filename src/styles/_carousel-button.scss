@@ -3,10 +3,14 @@
   height: 47px;
 
   &_next {
-    background: url(../images/slider-btn/next-btn.png);
+    background: url(../images/slider-btn/next-btn.png) no-repeat;
+    align-self: center;
+    margin-left: 20px;
   }
 
   &_prev {
-    background: url(../images/slider-btn/prev-btn.png);
+    background: url(../images/slider-btn/prev-btn.png) no-repeat;
+    align-self: center;
+    margin-right: 20px;
   }
 }
