@@ -5,5 +5,56 @@
 @import "carousel-button";
 
 body {
+  margin: 0 auto;
+  width: $carouselItemWidthWithGap + ($arrowsWidth * 2) + ($arrowsGap * 2);
+  display: grid;
+  grid-template-columns: $arrowsWidth $carouselItemWidthWithGap $arrowsWidth;
+  gap: 0 $arrowsGap;
+  align-items: center;
+
   font-family: Lato, sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.carousel {
+  width: $carouselItemWidthWithGap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+
+  transition: 0.9s ease-in-out;
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    margin: $itemGap;
+  }
+
+  &__dots-wrap {
+    width: 80px;
+    grid-column-start: 2;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bdbdbd;
+    border-radius: 50%;
+
+  }
+
+  &__dot_active {
+    background-color: #757575;
+  }
 }
