@@ -1,0 +1,64 @@
+.carousel {
+  display: grid;
+  grid-template-columns: 47px 1fr 47px;
+  gap: 32px;
+  align-items: center;
+
+  &__btn {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__btn-next {
+    background: url(../images/slider-btn/next-btn.png);
+  }
+
+  &__btn-prev {
+    background: url(../images/slider-btn/prev-btn.png);
+  }
+
+  &__dots-wrap {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    height: 16px;
+    width: 16px;
+    margin: 0 4px;
+    background-color: #aaa8ab;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  &__dot-active {
+    background-color: #767477;
+  }
+
+  &__container {
+    width: 310px;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s;
+  }
+
+  &__item {
+    list-style: none;
+  }
+}
