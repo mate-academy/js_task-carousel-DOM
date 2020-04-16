@@ -4,6 +4,49 @@
 @import "twitter-card";
 @import "carousel-button";
 
-body {
+body,
+ul,
+li {
   font-family: Lato, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  &__viewport {
+    width: 310px;
+    overflow: hidden;
+  }
+
+  &__list {
+    width: 9999px;
+    transition: transform 300ms;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    position: absolute;
+    bottom: -30px;
+  }
+
+  &__dot {
+    margin: 0 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #aaa8aa;
+
+    &_active {
+      background-color: #767476;
+    }
+  }
 }
