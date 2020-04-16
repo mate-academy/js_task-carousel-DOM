@@ -13,10 +13,10 @@ Create a “carousel” – a ribbon of twitter cards that can be scrolled by cl
 ![Example gif](./example/example.gif)
 
 ---
-**Read the guideline before start**
+**Read the guideline before start** 
 
 [Guideline](https://github.com/mate-academy/js_task-DOM-guideline)
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+- [UPDATE DEMO LINK](https://BorisovecViktor.github.io/js_task-carousel-DOM/)
