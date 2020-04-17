@@ -19,21 +19,23 @@ function moveSlider(currentSlide) {
 }
 
 nextButton.addEventListener('click', (passage) => {
-  if (number >= count - 1) {
-    return;
+  dots[number].classList.remove('carousel__dot_active');
+
+  if (number === count - 1) {
+    number = -1;
   }
 
-  dots[number].classList.remove('carousel__dot_active');
   number++;
   slides.forEach(moveSlider);
 });
 
 prevButton.addEventListener('click', (passage) => {
-  if (number <= 0) {
-    return;
+  dots[number].classList.remove('carousel__dot_active');
+
+  if (!number) {
+    number = count;
   }
 
-  dots[number].classList.remove('carousel__dot_active');
   number--;
   slides.forEach(moveSlider);
 });
