@@ -34,10 +34,18 @@ body {
 
   &__btn {
     margin-top: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 1px lightskyblue;
+    transition: box-shadow 200ms ease-in-out;
 
     &:hover {
       cursor: pointer;
-      border: 1px solid gold;
+      box-shadow: 0 0 8px 2px lightskyblue;
+    }
+
+    &:active {
+      cursor: pointer;
+      box-shadow: 0 0 2px lightskyblue;
     }
   }
 
