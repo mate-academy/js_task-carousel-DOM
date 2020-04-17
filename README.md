@@ -21,5 +21,5 @@ Create a “carousel” – a ribbon of twitter cards that can be scrolled by cl
 
    Replace `<your_account>` with your Github username in the links
 
-    - [DEMO LINK](https://andreas-just.github.io/js_sort-table-DOM/)
-    - [PULL REQUEST](https://github.com/mate-academy/js_sort-table-DOM/pull/19)
+    - [DEMO LINK](https://andreas-just.github.io/js_task-carousel-DOM/)
+    - [PULL REQUEST](https://github.com/mate-academy/js_task-carousel-DOM/pull/68)
