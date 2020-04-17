@@ -6,4 +6,53 @@
 
 body {
   font-family: Lato, sans-serif;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.gallery {
+  width: 310px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  transition: 1s;
+
+  &__item {
+    display: block;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(209, 209, 209);
+  }
+
+  &__dot:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &__dot_active {
+    background-color: rgb(121, 121, 121);
+  }
 }
