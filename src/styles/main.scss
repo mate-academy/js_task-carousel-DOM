@@ -5,5 +5,77 @@
 @import "carousel-button";
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Lato, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+
+  &__carousel {
+    width: 350px;
+    overflow: hidden;
+  }
+}
+
+.carousel {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s;
+  list-style: none;
+
+  &__item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__btn {
+    position: absolute;
+    margin-top: 55px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &_prev {
+      left: 0;
+    }
+
+    &_next {
+      right: 0;
+    }
+  }
+
+  &__dots-wrap {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+  }
+
+  &__dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    margin-right: 7px;
+    transition: background-color 0.3s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_active {
+      background-color: deepskyblue;
+    }
+  }
 }
