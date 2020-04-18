@@ -19,4 +19,5 @@ Create a “carousel” – a ribbon of twitter cards that can be scrolled by cl
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+- [UPDATE DEMO LINK](https://TetianaZakharova.github.io/
+js_task-carousel-DOM/)
