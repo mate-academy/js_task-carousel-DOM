@@ -6,4 +6,31 @@
 
 body {
   font-family: Lato, sans-serif;
+  padding: 100px;
+}
+
+.carousel {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.carousel__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__dots-wrap {
+  width: 310px;
+  overflow: hidden;
+}
+
+.carousel__btn_prev {
+  margin-right: 30px;
+}
+
+.carousel__btn_next {
+  margin-left: 30px;
 }
