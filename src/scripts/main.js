@@ -23,6 +23,7 @@ function toNextItem() {
     position = 0;
     currentItem = -1;
   }
+
   carousel.style.transform = `translateX(${position}px)`;
   currentItem++;
 
@@ -33,9 +34,10 @@ function toPreviousItem() {
   position += itemWidth;
 
   if (position > 0) {
-    position = 0;
-    currentItem = dots.length / dots.length;
+    position = -(itemWidth * (items.length - 1));
+    currentItem = dots.length;
   }
+
   carousel.style.transform = `translateX(${position}px)`;
   currentItem--;
 
