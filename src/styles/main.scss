@@ -6,4 +6,44 @@
 
 body {
   font-family: Lato, sans-serif;
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+
+  &__item {
+    margin: 20px;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+  }
+  &__dot {
+    border-radius: 50%;
+    background: grey;
+    width: 10px;
+    height: 10px;
+  }
+
+  &__dot_active {
+    background: lightgrey;
+  }
 }
