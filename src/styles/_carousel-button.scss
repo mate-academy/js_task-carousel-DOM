@@ -4,9 +4,11 @@
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
+    cursor: pointer;
   }
 
   &_prev {
     background: url(../images/slider-btn/prev-btn.png);
+    cursor: pointer;
   }
 }
