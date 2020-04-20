@@ -1,0 +1,36 @@
+.carousel {
+  display: flex;
+  list-style: none;
+  transition: all 0.5s;
+  padding: 0;
+  margin: 0;
+  &__btn {
+    cursor: pointer;
+    position: absolute;
+    &_next {
+      right: 200px;
+      top: 30%;
+    }
+    &_prev {
+      left: 200px;
+      top: 30%;
+    }
+  }
+  &__dots-wrap {
+    display: flex;
+    width: 110px;
+    margin: 10px auto 0;
+  }
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid transparent;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 0 5px;
+    &_active {
+      background-color: rgb(56, 56, 56);
+      transition: all 0.5s;
+    }
+  }
+}
