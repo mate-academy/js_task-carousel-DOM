@@ -1,6 +1,13 @@
 .carousel__btn {
   width: 47px;
   height: 47px;
+  transition: transform 0.3s;
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+  }
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
