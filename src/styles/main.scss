@@ -7,3 +7,53 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+html * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 500px;
+  margin: 50px auto;
+}
+
+.slider {
+  width: 310px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  list-style: none;
+  transition: transform 0.4s ease-in-out;
+
+  &__dots-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 50%;
+
+    &_active {
+      background-color: dimgrey;
+    }
+  }
+
+  &__item:not(:last-of-type) {
+    margin-right: 10px;
+  }
+}
