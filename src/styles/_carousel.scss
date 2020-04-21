@@ -1,0 +1,31 @@
+.carousel {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s;
+
+  &__item {
+    padding: 0 10px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(197, 188, 188);
+
+    &_active {
+      background-color: rgb(100, 99, 99);
+    }
+  }
+
+  &__dots-wrap {
+    width: 55px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
