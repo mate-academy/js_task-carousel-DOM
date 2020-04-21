@@ -9,8 +9,8 @@ const dots = document.querySelectorAll('.carousel__dot');
 const widthCarousel = carousel.scrollWidth;
 const widthCard = carouselItem.clientWidth;
 
-let count = 0;
-let prevCount = 0;
+let dotPosition = 0;
+// let prevCount = 0;
 let position = 0;
 
 btnPrev.addEventListener('click', (e) => {
@@ -22,20 +22,24 @@ btnPrev.addEventListener('click', (e) => {
 
   if (position === 0) {
     position = -widthCarousel;
-    count = dots.length - 1;
-  }
-
-  if (count < 0) {
-    count = dots.length - 1;
   }
 
   position += widthCard;
 
   carousel.style.transform = `translate(${position}px)`;
-  dots[prevCount].classList.remove('carousel__dot_active');
-  dots[count].classList.add('carousel__dot_active');
-  prevCount = count;
-  count--;
+
+  if (dotPosition === 0) {
+    dots[dotPosition].classList.remove('carousel__dot_active');
+    dotPosition = dots.length;
+    dots[dotPosition - 1].classList.add('carousel__dot_active');
+  }
+
+  if (dotPosition > 0 && dotPosition < dots.length) {
+    dots[dotPosition].classList.remove('carousel__dot_active');
+    dots[dotPosition - 1].classList.add('carousel__dot_active');
+  }
+
+  dotPosition--;
 });
 
 btnNext.addEventListener('click', (e) => {
@@ -49,12 +53,20 @@ btnNext.addEventListener('click', (e) => {
 
   if (-position > widthCarousel - widthCard) {
     position = 0;
-    count = 0;
   }
 
   carousel.style.transform = `translate(${position}px)`;
-  dots[prevCount].classList.remove('carousel__dot_active');
-  dots[count].classList.add('carousel__dot_active');
-  prevCount = count;
-  count++;
+
+  if (dotPosition < dots.length - 1) {
+    dots[dotPosition + 1].classList.add('carousel__dot_active');
+    dots[dotPosition].classList.remove('carousel__dot_active');
+  }
+
+  if (dotPosition === dots.length - 1) {
+    dots[dotPosition].classList.remove('carousel__dot_active');
+    dotPosition = -1;
+    dots[dotPosition + 1].classList.add('carousel__dot_active');
+  }
+
+  dotPosition++;
 });
