@@ -3,7 +3,19 @@
 @import "typography";
 @import "twitter-card";
 @import "carousel-button";
+@import "container";
+@import "carousel";
 
 body {
   font-family: Lato, sans-serif;
+  background-color: rgb(12, 9, 49);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+div {
+  margin: 0;
 }
