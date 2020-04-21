@@ -8,20 +8,22 @@
   <script type="text/javascript" src="scripts/main.js" defer></script>
 </head>
 <body>
+<div class="container carousel">
   <div class="carousel__btn carousel__btn_prev"></div>
 
-  <ul class="carousel">
-    <li class="carousel__item">
-      <div class="twitter-card">
-        <img class="twitter-card__avatar" alt="user avatar" src="images/noah-jackson-avatar.png">
-        <div class="twitter-card__name">Noah Jackson</div>
-        <div class="twitter-card__ico"></div>
-        <div class="twitter-card__message">I use this app every day and it's a
-          great way to keep up to date with what's going on in football. It's
-          a shame it won't rotate into landscape mode like its main competitor
+  <div class="carousel__container">
+    <ul class="carousel__list">
+      <li class="carousel__item">
+        <div class="twitter-card">
+          <img class="twitter-card__avatar" alt="user avatar" src="images/noah-jackson-avatar.png">
+          <div class="twitter-card__name">1 Noah Jackson</div>
+          <div class="twitter-card__ico"></div>
+          <div class="twitter-card__message">I use this app every day and it's a
+            great way to keep up to date with what's going on in football. It's
+            a shame it won't rotate into landscape mode like its main competitor
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
     <li class="carousel__item">
       <div class="twitter-card">
@@ -59,13 +61,14 @@
     </li>
   </ul>
 
-  <div class="carousel__btn carousel__btn_next"></div>
-
   <div class="carousel__dots-wrap">
     <div class="carousel__dot carousel__dot_active"></div>
     <div class="carousel__dot"></div>
     <div class="carousel__dot"></div>
     <div class="carousel__dot"></div>
   </div>
+  </div>
+  <div class="carousel__btn carousel__btn_next"></div>
+</div>
 </body>
 </html>
