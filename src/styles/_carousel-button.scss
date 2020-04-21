@@ -1,12 +1,19 @@
+
 .carousel__btn {
   width: 47px;
   height: 47px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
+    right: 0;
   }
 
   &_prev {
     background: url(../images/slider-btn/prev-btn.png);
+    left: 0;
   }
 }
