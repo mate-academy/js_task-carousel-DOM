@@ -13,7 +13,7 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  margin-left: 0;
+  transition: transform 1s;
 }
 
 .carousel__wrap {
@@ -33,4 +33,22 @@ body {
 
 .carousel__btn_next {
   margin-left: 30px;
+}
+
+.dots__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.dots {
+  display: inline-block;
+  left: 50px;
+  background-color: whitesmoke;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dots:nth-child(1) {
+  background-color: gray;
 }

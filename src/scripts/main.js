@@ -2,7 +2,9 @@
 
 const carouselWrap = document.querySelector('.carousel__wrap');
 const carousel = document.querySelector('.carousel');
+const dots = document.querySelectorAll('.dots');
 let index = 0;
+let indexDots = 0;
 
 carouselWrap.addEventListener('click', () => {
   const target = event.target;
@@ -12,16 +14,27 @@ carouselWrap.addEventListener('click', () => {
     return;
   }
 
-  if (target.classList[1] === 'carousel__btn_next' & index <= 620) {
-    pesach(310);
+  if (target.classList[1] === 'carousel__btn_next' & index >= -620) {
+    pesach(-310, 1);
   }
 
-  if (target.classList[1] === 'carousel__btn_prev' & index >= 310) {
-    pesach(-310);
+  if (target.classList[1] === 'carousel__btn_prev' & index <= -310) {
+    pesach(310, -1);
   }
 });
 
-function pesach(item) {
-  index = index + item;
-  carousel.style.marginLeft = `-${index}px`;
-}
+function pesach(size, item) {
+  index = index + size;
+  indexDots = indexDots + item;
+
+  carousel.style.transform = `translateX(${index}px)`;
+  dots[indexDots].style.backgroundColor = 'gray';
+
+  if (indexDots) {
+    dots[indexDots - 1].style.backgroundColor = 'whitesmoke';
+  }
+
+  if (indexDots < 3) {
+    dots[indexDots + 1].style.backgroundColor = 'whitesmoke';
+  }
+};
