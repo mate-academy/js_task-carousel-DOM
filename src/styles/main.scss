@@ -5,5 +5,42 @@
 @import "carousel-button";
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Lato, sans-serif;
+}
+
+.carousel {
+  padding: 0;
+  position: relative;
+  display: flex;
+  width: 310px;
+  overflow: hidden;
+
+  &__item {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s;
+    margin-right: 20px;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    position: absolute;
+    top: 200px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    margin-right: 5px;
+    opacity: 0.5;
+  }
+
+  &__dot_active {
+    opacity: 1;
+  }
 }
