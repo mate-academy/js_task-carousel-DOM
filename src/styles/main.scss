@@ -5,5 +5,96 @@
 @import "carousel-button";
 
 body {
+  width: 100%;
   font-family: Lato, sans-serif;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 350px 1fr;
+
+}
+
+.blinded-left {
+  position: relative;
+  top: 0;
+  z-index: 1;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+
+.blinded-right {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  left: 20px;
+}
+
+.carousel {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+  position: relative;
+  transition: transform 0.5s;
+  left: 0;
+}
+
+.carousel__dots-wrap {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 1;
+  top: 220px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: rgba(00, 00, 00, 0.4);
+}
+
+.carousel__dot_active {
+  background-color: rgba(00, 00, 00, 0.7);
+}
+
+.carousel__btn {
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.carousel__btn_prev {
+  left: -100px;
+}
+
+.carousel__btn_next {
+  left: 365px;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
