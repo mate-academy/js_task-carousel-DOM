@@ -1,5 +1,5 @@
 'use strict';
-
+//
 const createCarousel = () => {
   const wrapper = document.querySelector('.wrapper');
   const galleryelement = document.querySelector('.carousel');
