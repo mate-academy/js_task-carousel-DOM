@@ -8,39 +8,19 @@ const dotCarousel = document.querySelector('.carousel__dots-wrap').children;
 const itemWidth = document.querySelector('.carousel__item').clientWidth;
 let currentItem = 0;
 
-function disableBtn() {
-  switch (currentItem) {
-    case 0:
-      nextBtn.classList.remove('disable');
-      prevBtn.classList.add('disable');
-      break;
-    case (itemCarousel.length - 1):
-      nextBtn.classList.add('disable');
-      prevBtn.classList.remove('disable');
-      break;
-    default:
-      nextBtn.classList.remove('disable');
-      prevBtn.classList.remove('disable');
-  }
-};
-
-disableBtn(prevBtn);
-
 prevBtn.addEventListener('click', (e) => {
   if (currentItem <= 0) {
-    return;
+    currentItem = itemCarousel.length;
   }
   currentItem--;
-  disableBtn();
   handlePosition(currentItem);
 });
 
 nextBtn.addEventListener('click', () => {
   if (currentItem >= itemCarousel.length - 1) {
-    return;
+    currentItem = -1;
   }
   currentItem++;
-  disableBtn();
   handlePosition(currentItem);
 });
 
@@ -48,7 +28,6 @@ nextBtn.addEventListener('click', () => {
   el.addEventListener('click', () => {
     handlePosition(i);
     currentItem = i;
-    disableBtn();
   });
 });
 

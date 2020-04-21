@@ -34,10 +34,6 @@ body {
     margin: auto;
     position: absolute;
     cursor: pointer;
-    &.disable {
-      opacity: 0.5;
-      cursor: no-drop;
-    }
     &_prev {
       left: 0;
     }
