@@ -1,60 +1,40 @@
 'use strict';
 
-const btnPrev = document.querySelector('.carousel__btn_prev');
-const btnNext = document.querySelector('.carousel__btn_next');
 const carousel = document.querySelector('.carousel');
-const carouselItem = document.querySelector('.carousel__item');
-const dot = document.querySelectorAll('.carousel__dot');
-
-const widthCarousel = carousel.scrollWidth;
-const widthCard = carouselItem.clientWidth;
+const items = document.querySelectorAll('.carousel__item');
+const dots = document.querySelectorAll('.carousel__dot');
+const nextBtn = document.querySelector('.carousel__btn_next');
+const prevBtn = document.querySelector('.carousel__btn_prev');
+const activeDot = 'carousel__dot_active';
 
 let count = 0;
-let prevCount = 0;
-let position = 0;
+const itemSize = 340;
+const marginRight = 10;
 
-btnPrev.addEventListener('click', (ev) => {
-  const elementActive = ev.target.closest('.carousel__btn_prev');
+const slider = () => {
+  carousel.style.transform = `
+    translateX(${(-itemSize - marginRight) * count}px)`;
+  dots[count].classList.add(activeDot);
+};
 
-  if (!elementActive) {
-    return;
+nextBtn.addEventListener('click', () => {
+  if (count >= items.length - 1) {
+    count = -1;
+    dots[items.length - 1].classList.remove(activeDot);
   }
 
-  if (position === 0) {
-    position = -widthCarousel;
-    count = dot.length - 1;
-  }
-
-  if (count < 0) {
-    count = dot.length - 1;
-  }
-
-  position += widthCard;
-
-  carousel.style.transform = `translate(${position}px)`;
-  dot[prevCount].classList.remove('carousel__dot_active');
-  dot[count].classList.add('carousel__dot_active');
-  prevCount = count;
-  count--;
+  count++;
+  slider();
+  dots[count - 1].classList.remove(activeDot);
 });
 
-btnNext.addEventListener('click', (ev) => {
-  const elementActive = ev.target.closest('.carousel__btn_next');
-
-  if (!elementActive) {
-    return;
+prevBtn.addEventListener('click', () => {
+  if (count <= 0) {
+    count = items.length;
+    dots[0].classList.remove(activeDot);
   }
 
-  position -= widthCard;
-
-  if (-position > widthCarousel - widthCard) {
-    position = 0;
-    count = 0;
-  }
-
-  carousel.style.transform = `translate(${position}px)`;
-  dot[prevCount].classList.remove('carousel__dot_active');
-  dot[count].classList.add('carousel__dot_active');
-  prevCount = count;
-  count++;
+  count--;
+  slider();
+  dots[count + 1].classList.remove(activeDot);
 });
