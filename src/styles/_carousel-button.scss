@@ -4,9 +4,17 @@
 
   &_next {
     background: url(../images/slider-btn/next-btn.png);
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
   }
 
   &_prev {
     background: url(../images/slider-btn/prev-btn.png);
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
   }
 }
