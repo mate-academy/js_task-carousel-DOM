@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Carousel</title>
@@ -7,9 +8,11 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <script type="text/javascript" src="scripts/main.js" defer></script>
 </head>
-<body>
-  <div class="carousel__btn carousel__btn_prev"></div>
 
+<body>
+  <div class="carousel__wrap">
+  <div class="carousel__btn carousel__btn_prev"></div>
+  <div class="carousel__container">
   <ul class="carousel">
     <li class="carousel__item">
       <div class="twitter-card">
@@ -58,6 +61,7 @@
       </div>
     </li>
   </ul>
+</div>
 
   <div class="carousel__btn carousel__btn_next"></div>
 
@@ -67,5 +71,7 @@
     <div class="carousel__dot"></div>
     <div class="carousel__dot"></div>
   </div>
+</div>
 </body>
+
 </html>
