@@ -6,4 +6,51 @@
 
 body {
   font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+    box-sizing: border-box;
+    width: 330px;
+    height: 160px;
+    overflow: hidden;
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+
+    &__item {
+      margin-right: 10px;
+      position: relative;
+      right: 0;
+      transition: right 1s;
+    }
+
+    &__dots {
+      &-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  
+    &__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: lightgrey;
+      margin-right: 7px;
+
+      &_active {
+        background-color: darkgrey;
+      }
+    }
+  }
 }
