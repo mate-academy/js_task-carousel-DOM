@@ -15,12 +15,7 @@ carousel.querySelector('.carousel__btn_prev').addEventListener('click', () => {
   }
 
   position--;
-  list.style.marginLeft = -position * width + 'px';
-
-  /* console.log(`
-                  position = ${position};
-                  marginLeft = ${list.style.marginLeft}
-                `); */
+  list.style.transform = `translate(${-position * width + 'px'})`;
 
   highlightDot();
 });
@@ -30,12 +25,7 @@ carousel.querySelector('.carousel__btn_next').addEventListener('click', () => {
     position = -1;
   }
   position++;
-  list.style.marginLeft = -position * width + 'px';
-
-  /* console.log(`
-                  position = ${position};
-                  marginLeft = ${list.style.marginLeft}
-                `); */
+  list.style.transform = `translate(${-position * width + 'px'})`;
 
   highlightDot();
 });
