@@ -19,7 +19,7 @@ function arrow(ev) {
     }
 
     for (const el of item) {
-      el.style.right = `${position}px`;
+      el.style.transform = `translate(-${position}px, 0)`;
     }
   }
 
@@ -31,7 +31,7 @@ function arrow(ev) {
     }
 
     for (const el of item) {
-      el.style.right = `${position}px`;
+      el.style.transform = `translate(-${position}px, 0)`;
     }
   }
 
