@@ -6,4 +6,73 @@
 
 body {
   font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+
+  .container {
+    position: relative;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+
+    .carousel__btn {
+      display: inline-block;
+      position: absolute;
+      width: 47px;
+      top: 57px;
+
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 1);
+        border-radius: 50%;
+      }
+
+      &_prev {
+        left: 5px;
+      }
+
+      &_next {
+        right: 5px;
+      }
+    }
+
+    .sliding-area {
+      width: 310px;
+      overflow: hidden;
+
+      .carousel__list {
+        padding: 0;
+        margin: 0;
+        width: 9999px;
+        transition: margin-left 250ms;
+        font-size: 0;
+
+      }
+
+      .carousel__item {
+        display: inline-block;
+      }
+    }
+    .carousel__dots-wrap {
+      display: flex;
+      position: absolute;
+      bottom: -30px;
+      height: 15px;
+
+      .carousel__dot {
+        width: 10px;
+        height: 10px;
+        background-color: #bbb;
+        margin: 0 5px;
+        border-radius: 50%;
+
+        &_active {
+          background-color: #666;
+        }
+      }
+    }
+
+  }
+
 }
