@@ -6,14 +6,15 @@
 }
 
 .carousel {
-  width: 310px; 
-  
   display: flex;
+  width: 310px;
+
   padding: 0;
   transition: 0.8s ease-in-out;
 
   li {
     position: relative;
+
     list-style: none;
   }
 
