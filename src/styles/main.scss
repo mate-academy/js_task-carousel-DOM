@@ -3,7 +3,18 @@
 @import "typography";
 @import "twitter-card";
 @import "carousel-button";
+@import "carousel";
 
 body {
+  margin: 0;
   font-family: Lato, sans-serif;
+}
+
+ul li {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  margin-top: 20px;
 }
