@@ -6,4 +6,48 @@
 
 body {
   font-family: Lato, sans-serif;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.carousel__item {
+  list-style: none;
+  transition: transform 0.7s;
+}
+
+.carousel {
+  display: flex;
+  margin: 30px 50px 10px;
+  overflow: hidden;
+  width: 310px;
+}
+
+.area-carusel {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.carousel__dots-wrap {
+  justify-content: center;
+  display: flex;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #828282;
+  border-radius: 50%;
+  margin-right: 5px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &_active {
+    background-color: #4f4f4f;
+  }
 }
