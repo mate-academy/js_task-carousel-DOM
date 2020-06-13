@@ -44,6 +44,6 @@ function getModifier(element) {
 function setDots() {
   const modifier = 'carousel__dot_active';
 
-  dots.map(dot => dot.classList.remove(modifier));
+  dots.forEach(dot => dot.classList.remove(modifier));
   dots[carousel.counter].classList.add(modifier);
 }
