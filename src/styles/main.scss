@@ -6,4 +6,34 @@
 
 body {
   font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  padding: 0;
+  width: 310px;
+  overflow: hidden;
+}
+
+.carousel__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: grey;
+
+}
+
+.carousel__dots-wrap {
+  position: absolute;
+  top: 250px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel__item {
+  transition: margin-left 1s;
 }
