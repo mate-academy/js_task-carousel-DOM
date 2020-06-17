@@ -1,9 +1,13 @@
 'use strict';
 
-const list = document.querySelector('.carousel');
+const twit = document.querySelector('.carousel').firstElementChild;
 const arrowPrev = document.querySelector('.carousel__btn_prev');
 const arrowNext = document.querySelector('.carousel__btn_next');
 const dots = [...document.querySelector('.carousel__dots-wrap').children];
+const item = document.querySelector('.carousel__item');
+
+const margin = parseFloat(getComputedStyle(item).marginRight);
+const gap = parseFloat(getComputedStyle(item).width) + margin;
 
 arrowPrev.addEventListener('click', () => {
   for (let i = 0; i < dots.length; i++) {
@@ -12,11 +16,17 @@ arrowPrev.addEventListener('click', () => {
 
       if (i === 0) {
         dots[dots.length - 1].classList.add('carousel__dot_active');
-        list.scrollTo(1240, 0);
+
+        const distance = gap * (i + dots.length - 1);
+
+        twit.style.marginLeft = `-${distance}px`;
         break;
       } else {
         dots[i - 1].classList.add('carousel__dot_active');
-        list.scrollBy(-310, 0);
+
+        const distance = gap * (i - 1);
+
+        twit.style.marginLeft = `-${distance}px`;
       }
     };
   }
@@ -29,11 +39,14 @@ arrowNext.addEventListener('click', () => {
 
       if (i === (dots.length - 1)) {
         dots[0].classList.add('carousel__dot_active');
-        list.scrollTo(0, 0);
+        twit.style.marginLeft = 0;
       } else {
         dots[i + 1].classList.add('carousel__dot_active');
-        list.scrollBy(310, 0);
-        i++;
+
+        const distance = gap * (i + 1);
+
+        twit.style.marginLeft = `-${distance}px`;
+        break;
       }
     }
   }
