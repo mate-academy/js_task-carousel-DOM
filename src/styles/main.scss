@@ -31,14 +31,26 @@ li {
   &__wrapper {
     width: 310px;
     overflow: hidden;
-    padding: 0 25px;
   }
+
   &__item {
     margin-right: 30px;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__btn_prev {
+    margin-right: 25px;
+  }
+
+  &__btn_next {
+    margin-left: 25px;
   }
 
   &__dots-wrap {
@@ -55,6 +67,8 @@ li {
     border-radius: 50%;
 
     margin-right: 10px;
+
+    transition: background-color 0.5s ease;
 
     &:last-child {
       margin-right: 0;
