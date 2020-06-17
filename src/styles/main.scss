@@ -7,3 +7,61 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 310px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+
+  &__btn {
+    position: absolute;
+    top: calc(50% - 40px);
+  }
+
+  &__btn_prev {
+    left: -60px;
+  }
+
+  &__btn_next {
+    left: 323px;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60px;
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #b1afb1;
+  }
+
+  &__dot_active {
+    background-color: #767476;
+  }
+}
