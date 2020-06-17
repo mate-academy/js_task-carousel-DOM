@@ -4,6 +4,10 @@
 @import "twitter-card";
 @import "carousel-button";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Lato, sans-serif;
   margin: 0;

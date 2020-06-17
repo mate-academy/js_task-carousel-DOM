@@ -5,7 +5,9 @@ const items = document.querySelectorAll('.carousel__item');
 const prev = document.querySelector('.carousel__btn_prev');
 const next = document.querySelector('.carousel__btn_next');
 const dots = document.querySelectorAll('.carousel__dot');
-const gap = 340;
+const card = document.querySelector('.carousel__item');
+const margin = parseFloat(getComputedStyle(card).marginRight);
+const gap = parseFloat(getComputedStyle(card).width) + margin;
 
 let position = 0;
 let i = 0;
