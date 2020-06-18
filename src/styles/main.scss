@@ -7,3 +7,64 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__environment {
+    align-items: center;
+    margin: 10px 0;
+    display: flex;
+  }
+  
+  &__wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 310px;
+  }
+  
+  &__list {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.3s;
+    list-style: none;
+  }
+  
+  &__btn {
+    cursor: pointer;
+  }
+  
+  &__btn_prev {
+    margin-right: 10px;
+  }
+  
+  &__btn_next {
+    margin-left: 10px;
+  }
+  
+  &__dots-wrap {
+    display: flex;
+  }
+  
+  &__dot {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    opacity: 0.5;
+    margin-right: 10px;
+  }
+  
+  &__dot_active {
+    opacity: 1;
+  }
+}
