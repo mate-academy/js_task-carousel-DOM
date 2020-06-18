@@ -1,5 +1,5 @@
 'use strict';
-/* eslint-disable */
+
 const sliderBG = document.querySelector('.carousel');
 const btnLeft = document.querySelector('.carousel__btn_prev');
 const btnRight = document.querySelector('.carousel__btn_next');
