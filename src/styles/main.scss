@@ -7,3 +7,26 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.carousel {
+  padding-left: 0;
+  display: flex;
+  transition: transform 1s;
+  
+  &__item {
+    transition: transform 1s ease;
+    list-style: none;
+  }
+}
