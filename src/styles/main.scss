@@ -7,3 +7,70 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 100px auto;
+  width: 500px;
+  position: relative;
+
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.carousel {
+  &-wrapper {
+    overflow: hidden;
+  }
+
+  &__cards {
+    width: 310px;
+    height: 160px;
+
+  }
+
+  &__dots-wrap {
+    display: flex;
+    margin-top: 10px;
+    width: 60px;
+    justify-content: space-between;
+  }
+
+  &__dot {
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid 1px;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+
+  &__btn_prev {
+    position: absolute;
+    top: 30%;
+    left: 0;
+  }
+
+  &__dot_active {
+    border: double 5px;
+  }
+}
