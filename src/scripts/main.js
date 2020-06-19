@@ -17,7 +17,7 @@ function prev() {
 
   dot();
 
-  if (sliderBG.scrollLeft >= (920)) {
+  if (sliderBG.scrollLeft >= (950)) {
     sliderBG.scrollTo(0, 0);
   }
 }
@@ -34,7 +34,7 @@ function next() {
   dot();
 
   if (sliderBG.scrollLeft <= 0) {
-    sliderBG.scrollTo((320 * 3), 0);
+    sliderBG.scrollTo(960, 0);
   }
 }
 
