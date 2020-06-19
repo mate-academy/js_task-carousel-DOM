@@ -4,13 +4,10 @@ const sliderBG = document.querySelector('.carousel');
 const btnLeft = document.querySelector('.carousel__btn_prev');
 const btnRight = document.querySelector('.carousel__btn_next');
 
-const slideSize = sliderBG.getBoundingClientRect().width;
-const slideQuantity = [...sliderBG.children].length - 1;
-
 let dotCount = 0;
 
 function prev() {
-  sliderBG.scrollBy(slideSize, 0);
+  sliderBG.scrollBy(320, 0);
 
   dotCount++;
 
@@ -26,7 +23,7 @@ function prev() {
 }
 
 function next() {
-  sliderBG.scrollBy(-slideSize, 0);
+  sliderBG.scrollBy(-320, 0);
 
   dotCount--;
 
@@ -37,7 +34,7 @@ function next() {
   dot();
 
   if (sliderBG.scrollLeft <= 0) {
-    sliderBG.scrollTo((slideSize * slideQuantity), 0);
+    sliderBG.scrollTo((320 * 3), 0);
   }
 }
 
