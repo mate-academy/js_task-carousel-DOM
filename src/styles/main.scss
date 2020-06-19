@@ -7,3 +7,63 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  margin: 0 auto;
+  width: 30%;
+  min-width: 430px;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.carousel {
+  padding-left: 0;
+
+  display: flex;
+
+  position: relative;
+
+  transition: transform 0.3s;
+  
+  &__item {
+    transition: transform 1s ease;
+    list-style: none;
+  }
+
+  &__dots-wrap {
+    display: flex;
+    position: absolute;
+
+    bottom: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+
+    transition: background-color 0.3s;
+    
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+  
+  &__dot_active {
+    background-color: rgba(0, 0, 0, 1);
+    transition: background-color 0.3s;
+  }
+}
