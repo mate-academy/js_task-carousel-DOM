@@ -11,7 +11,7 @@ let cardIndex = 0;
 btnNext.addEventListener('click', e => {
   cardIndex++;
 
-  if (cardIndex >= 4) {
+  if (cardIndex === 4) {
     cardIndex = 0;
   }
 
