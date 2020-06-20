@@ -20,6 +20,10 @@ li {
   align-items: center;
   margin-bottom: 10px;
 
+  &__btn {
+    cursor: pointer;
+  }
+
   &__wrapper {
     height: 170px;
     width: 320px;

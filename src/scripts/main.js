@@ -5,6 +5,7 @@ const btnPrev = document.querySelector('.carousel__btn_prev');
 const btnNext = document.querySelector('.carousel__btn_next');
 const dots = document.querySelectorAll('.carousel__dot');
 let count = 0;
+const carouselWidth = carousel.offsetWidth + 10;
 
 function movePrevDot() {
   if (count > 0) {
@@ -28,7 +29,7 @@ function moveCarousel(width) {
   };
 }
 
-btnPrev.addEventListener('click', moveCarousel(-330));
-btnNext.addEventListener('click', moveCarousel(330));
+btnPrev.addEventListener('click', moveCarousel(-carouselWidth));
+btnNext.addEventListener('click', moveCarousel(carouselWidth));
 btnPrev.addEventListener('click', movePrevDot);
 btnNext.addEventListener('click', moveNextDot);
