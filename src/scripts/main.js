@@ -37,7 +37,7 @@ prevButton.addEventListener('click', () => {
   // Smooth scroll function
   let scrollAmount = 0;
   const slideTimer = setInterval(() => {
-    const scrollWidth = cardWidth;
+    const scrollWidth = cardWidth + 10;
     const scrollStep = scrollWidth / 10;
 
     carouselViewport.scrollLeft -= scrollStep;
@@ -68,7 +68,7 @@ nextButton.addEventListener('click', e => {
 
   let scrollAmount = 0;
   const slideTimer = setInterval(() => {
-    const scrollWidth = cardWidth;
+    const scrollWidth = cardWidth + 10;
     const scrollStep = scrollWidth / 10;
 
     carouselViewport.scrollLeft += scrollStep;
