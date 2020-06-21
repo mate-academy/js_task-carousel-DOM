@@ -2,8 +2,22 @@
 @import "fonts";
 @import "typography";
 @import "twitter-card";
+@import "carousel";
 @import "carousel-button";
 
 body {
   font-family: Lato, sans-serif;
+}
+
+.container {
+  margin: auto ;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 500px;
+}
+
+.carousel-wrapper {
+  width: 350px;
+  overflow: hidden;
 }
