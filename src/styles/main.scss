@@ -7,3 +7,43 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carousel-viewport {
+  margin: 0 20px;
+}
+
+.carousel {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  &__item {
+    margin-right: 10px;
+  }
+}
+
+.dots-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: darkgrey;
+  border-radius: 50%;
+  margin-right: 3px;
+  &--active {
+    background-color: grey;
+  }
+  &:last-child {
+    margin: 0;
+  }
+}
