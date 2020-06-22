@@ -14,10 +14,12 @@ li {
   box-sizing: border-box;
 }
 
-body {
+.carousel__wrapper {
   font-family: Lato, sans-serif;
+  width: 580px;
   padding: 40px;
   display: flex;
+  flex-wrap: wrap;
 
   align-items: center;
   justify-content: center;
@@ -33,5 +35,23 @@ body {
 
   &__item {
     margin: 0 20px;
+  }
+
+  &__dots-wrap {
+    width: 50px;
+  }
+
+  &__dot {
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+
+    border-radius: 50%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  &__dot_active {
+    opacity: 0.8;
   }
 }
