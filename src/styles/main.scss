@@ -4,6 +4,34 @@
 @import "twitter-card";
 @import "carousel-button";
 
+html,
+body,
+div,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Lato, sans-serif;
+  padding: 40px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  width: 350px;
+  margin: 0 20px;
+  display: flex;
+
+  overflow: hidden;
+  list-style: none;
+
+  &__item {
+    margin: 0 20px;
+  }
 }
